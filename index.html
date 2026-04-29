@@ -1,149 +1,158 @@
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   
     <title>Premium Sneaker Store | Urban Velocity Series</title>
 
-    <!-- SMOOTH ZOOM ANIMATION -->
     <style>
+.navbar {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+}
         body {
-            font-family: Arial, sans-serif;
+    
             background-color: #f4f4f4;
             margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         img {
+            width: 700px;
             transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
             cursor: pointer;
         }
 
         img:hover {
-            transform: scale(1.18);
+            transform: scale(1.1);
         }
 
-        img:active {
-            transform: scale(1.25);
-        }
-
-        .header {
-            background: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container {
-            width: 800px;
-            margin: auto;
-            background: #fff;
-        }
-
-        .product {
-            text-align: center;
-            padding: 40px 20px;
+        h1 {
+            color: #333;
         }
 
         .price {
             color: green;
         }
 
+        .desc {
+            color: #555;
+        }
+
         .btn {
-            padding: 15px 50px;
-            background: #000;
-            color: #fff;
-            border: none;
             cursor: pointer;
+            padding: 12px 40px;
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #333;
         }
 
         .section {
-            padding: 40px;
-            background: #fdfdfd;
+            padding: 40px 0;
         }
 
-        .reviews {
-            background: #fafafa;
-            padding: 40px;
+        .card {
+            background-color: white;
+            width: 800px;
+            margin: auto;
+            padding-bottom: 20px;
         }
 
         .footer {
             text-align: center;
-            padding: 30px;
             color: #999;
+            padding: 30px;
         }
     </style>
 </head>
 
 <body>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</div> 
 
     <!-- Header -->
-    <div class="header">
-        <h1>URBAN VELOCITY</h1>
-        <p style="color:#cc0000;"><b>PREMIUM FOOTWEAR SERIES</b></p>
-        <h3>🛒 Cart: 0</h3>
-    </div>
-
-    <!-- Main Content -->
-    <div class="container">
+    <div class="card">
+        <center>
+            <h1>URBAN VELOCITY</h1>
+            <p style="color:#cc0000;"><b>PREMIUM FOOTWEAR SERIES</b></p>
+        </center>
 
         <!-- Product 1 -->
-        <div class="product">
+        <div class="section" align="center">
             <h2>01. THE SIGNATURE SILHOUETTE</h2>
-            <img src="C:\Users\Anushka Dakhole\OneDrive\Desktop\img1.png" width="700">
-            <h3 class="price">₹12,499.00</h3>
-            <p>The flagship model with premium Italian leather and modern performance.</p>
+            <img src="C:\Users\Anushka Dakhole\OneDrive\Desktop\img1.JPG " alt="shoe">
+            <h3 class="price">₹12,499</h3>
+            <p class="desc">Premium leather design with modern performance.</p>
             <button class="btn">Add to Cart</button>
+            <hr width="80%">
         </div>
 
         <!-- Product 2 -->
-        <div class="product">
+        <div class="section" align="center">
             <h2>02. AERODYNAMIC SIDE PROFILE</h2>
-            <img src="C:\Users\Anushka Dakhole\OneDrive\Desktop\JPG File (.jpg).img2" width="700">
-            <h3 class="price">₹11,999.00</h3>
-            <p>Lightweight design with carbon-fiber support for maximum speed.</p>
+            <img src="C:\Users\Anushka Dakhole\OneDrive\Desktop\img2.JPG " alt="shoe">
+            <h3 class="price">₹11,999</h3>
+            <p class="desc">Lightweight and designed for speed.</p>
             <button class="btn">Add to Cart</button>
+            <hr width="80%">
         </div>
 
         <!-- Product 3 -->
-        <div class="product">
+        <div class="section" align="center">
             <h2>03. TACTICAL HEEL & TRACTION</h2>
-            <img src="C:\Users\Anushka Dakhole\OneDrive\Desktop\JPG File (.jpg).img3" width="700">
-            <h3 class="price">₹13,299.00</h3>
-            <p>Rugged build with advanced traction and shock absorption.</p>
+            <img src="C:\Users\Anushka Dakhole\OneDrive\Desktop\img3.JPG" alt="shoe">
+            <h3 class="price">₹13,299</h3>
+            <p class="desc">Strong grip and high stability for all terrains.</p>
             <button class="btn">Add to Cart</button>
         </div>
 
         <!-- Customization -->
-        <div class="section">
-            <h2 style="text-align:center;">Customize Your Pair</h2>
+        <div class="section" align="center" style="background:#fdfdfd;">
+            <h2>Customize Your Pair</h2>
 
-            <form style="text-align:center;">
-                <p><b>Color:</b></p>
-                <input type="radio" name="color" checked> Red
-                <input type="radio" name="color"> Blue
-                <input type="radio" name="color"> Black
+            <p><b>Color</b></p>
+            <input type="radio" name="color" checked> Red
+            <input type="radio" name="color"> Blue
+            <input type="radio" name="color"> Black
 
-                <p><b>Size:</b></p>
-                <input type="radio" name="size"> 8
-                <input type="radio" name="size" checked> 9
-                <input type="radio" name="size"> 10
+            <p><b>Size</b></p>
+            <input type="radio" name="size"> 8
+            <input type="radio" name="size" checked> 9
+            <input type="radio" name="size"> 10
 
-                <br><br>
-                <button class="btn">CO3</button>
-            </form>
+            <br><br>
+            <button class="btn">Confirm</button>
         </div>
 
         <!-- Reviews -->
-        <div class="reviews">
+        <div class="section" style="background:#fafafa;">
             <h3>Customer Feedback</h3>
-            <p><b>Rohan S.</b> ★★★★★ - Great traction!</p>
-            <p><b>Anjali M.</b> ★★★★★ - Stylish and versatile.</p>
-            <p><b>Vikram K.</b> ★★★★☆ - Very lightweight.</p>
+            <p><b>Rohan S.</b>  - Great traction!</p>
+            <p><b>Anjali M.</b>  - Looks amazing.</p>
+            <p><b>Vikram K.</b>  - Very lightweight.</p>
         </div>
 
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        &copy; 2026 Urban Velocity India
+        © 2026 Urban Velocity India
     </div>
 
 </body>
+</html>
 </html>
