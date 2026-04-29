@@ -1,0 +1,7 @@
+let cart = 0;
+
+function addToCart(product) {
+    cart++;
+    alert(product + " added to cart! Total items: " + cart);
+    document.getElementById("cartCount").innerHTML = cart;
+}
