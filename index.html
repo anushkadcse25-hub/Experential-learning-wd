@@ -1,88 +1,122 @@
-html part
+
 <html lang="en">
 <head>
     <title>Premium Sneaker Store | Urban Velocity Series</title>
-    <link rel="Update and rename css to style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script>
+        let cart = 0;
+
+        function addToCart(product) {
+            cart++;
+            alert(product + " added to cart! Total items: " + cart);
+            document.getElementById("cartCount").innerHTML = cart;
+        }
+
+        function addReview() {
+            let name = document.getElementById("name").value;
+            let comment = document.getElementById("comment").value;
+
+            if (name === "" || comment === "") {
+                alert("Please fill all fields!");
+                return;
+            }
+
+            let review = "<p><b>" + name + "</b> - " + comment + "</p>";
+            document.getElementById("reviews").innerHTML += review;
+
+            document.getElementById("name").value = "";
+            document.getElementById("comment").value = "";
+        }
+    </script>
 </head>
 
 <body>
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
+<!-- Navbar -->
+<div>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="services.html">Services</a> |
     <a href="contact.html">Contact</a>
-</div> 
-
-
-    <center>
-        <h1>URBAN VELOCITY</h1>
-        <p style="color:red;"><b>PREMIUM FOOTWEAR SERIES</b></p>
-    </center>
-
-    <!-- Product 1 -->
-    <div  align="center">
-        <h2>01. THE SIGNATURE SILHOUETTE</h2>
-        <img src="C:\Users\Anushka Dakhole\OneDrive\Desktop\sneakers\image1.WEBP"width="200" 
-     height="200">
-        <h3 "price">₹12,499</h3>
-        <p"desc">Premium leather design with modern performance.</p>
-        <button"btn">Add to Cart</button>
-        <hr width="40%">
-    </div>
-
-    <!-- Product 2 -->
-    <div align="center">
-        <h2>02. AERODYNAMIC SIDE PROFILE</h2>
-        <img src="C:\Users\Anushka Dakhole\OneDrive\Desktop\sneakers\image2.WEBP"width="200" 
-     height="200">
-        <h3 "price">₹11,999</h3>
-        <p "desc">Lightweight and designed for speed.</p>
-        <button"btn">Add to Cart</button>
-        <hr width="40%">
-    </div>
-
-    <!-- Product 3 -->
-    <div align="center">
-        <h2>03. TACTICAL HEEL & TRACTION</h2>
-        <img src="C:\Users\Anushka Dakhole\OneDrive\Desktop\sneakers\image3.WEBP"width="200" 
-     height="200">
-
-        <h3 "price">₹13,299</h3>
-        <p"desc">Strong grip and high stability for all terrains.</p>
-        <button"btn">Add to Cart</button>
-    </div>
-
-    <!-- Customization -->
-    <div align="center" style="background:white;">
-        <h2>Customize Your Pair</h2>
-
-        <p><b>Color</b></p>
-        <input type="radio" name="color"> Red
-        <input type="radio" name="color"> Blue
-        <input type="radio" name="color"> Black
-
-        <p><b>Size</b></p>
-        <input type="radio" name="size"> 8
-        <input type="radio" name="size"> 9
-        <input type="radio" name="size"> 10
-
-        <br><br>
-        <button"btn">Confirm</button>
-    </div>
-
-    <!-- Reviews -->
-    <div class="section" style="background:white;">
-        <h3>Customer Feedback</h3>
-        <p><b>Rohan S.</b>  - Great traction!</p>
-        <p><b>Anjali M.</b>  - Looks amazing.</p>
-        <p><b>Vikram K.</b>  - Very lightweight.</p>
-    </div>
-
 </div>
 
-<div class="footer">
-    2026 Urban Velocity India
+<!-- Header -->
+<center>
+    <h1>URBAN VELOCITY</h1>
+    <p><b>PREMIUM FOOTWEAR SERIES</b></p>
+    <h3>🛒 Cart: <span id="cartCount">0</span></h3>
+</center>
+
+<!-- Product 1 -->
+<div align="center">
+    <h2>01. THE SIGNATURE SILHOUETTE</h2>
+    <img src="https://i.pinimg.com/1200x/a7/6e/0d/a76e0d6d26d0dd40a2efdb3ffb663940.jpg" width="200" height="200">
+    <h3>₹12,499</h3>
+    <p>Premium leather design with modern performance.</p>
+    <button onclick="addToCart('Signature Silhouette')">Add to Cart</button>
+    <hr width="40%">
+</div>
+
+<!-- Product 2 -->
+<div align="center">
+    <h2>02. AERODYNAMIC SIDE PROFILE</h2>
+    <img src="https://i.pinimg.com/1200x/51/86/f0/5186f0fb00e3fc69cfbe136d6308b51a.jpg" width="200" height="200">
+    <h3>₹11,999</h3>
+    <p>Lightweight and designed for speed.</p>
+    <button onclick="addToCart('Aerodynamic Side Profile')">Add to Cart</button>
+    <hr width="40%">
+</div>
+
+<!-- Product 3 -->
+<div align="center">
+    <h2>03. TACTICAL HEEL & TRACTION</h2>
+    <img src="https://i.pinimg.com/1200x/6f/28/3d/6f283d6901657cf5b09314bde4530dc7.jpg" width="200" height="200">
+    <h3>₹13,299</h3>
+    <p>Strong grip and high stability for all terrains.</p>
+    <button onclick="addToCart('Tactical Heel & Traction')">Add to Cart</button>
+</div>
+
+<!-- Customization -->
+<div align="center">
+    <h2>Customize Your Pair</h2>
+
+    <p><b>Color</b></p>
+    <input type="radio" name="color"> Red
+    <input type="radio" name="color"> Blue
+    <input type="radio" name="color"> Black
+
+    <p><b>Size</b></p>
+    <input type="radio" name="size"> 8
+    <input type="radio" name="size"> 9
+    <input type="radio" name="size"> 10
+
+    <br><br>
+    <button>Confirm</button>
+</div>
+
+<!-- Reviews -->
+<div align="center">
+    <h3>Customer Feedback</h3>
+
+    <div id="reviews">
+        <p><b>Rohan S.</b> - Great traction!</p>
+        <p><b>Anjali M.</b> - Looks amazing.</p>
+        <p><b>Vikram K.</b> - Very lightweight.</p>
+    </div>
+
+    <h4>Add Your Review</h4>
+
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <textarea id="comment" placeholder="Write your review"></textarea><br><br>
+
+    <button onclick="addReview()">Submit Review</button>
+</div>
+
+<!-- Footer -->
+<div>
+     2026 Urban Velocity India
 </div>
 
 </body>
